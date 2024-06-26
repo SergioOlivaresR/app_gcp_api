@@ -5,8 +5,8 @@ const port = 3100;
 
 // Create a BigQuery client
 const bigquery = new BigQuery({
-  projectId: 'indigo-anchor-339414',
-  keyFilename: 'indigo-anchor-339414-386626ca9202.json',
+  projectId: 'proyecto-red-movilidad',
+  keyFilename: 'proyecto-red-movilidad-dc34f732f034.json',
 });
 
 app.get('/health', async (req, res) => {
@@ -14,7 +14,8 @@ app.get('/health', async (req, res) => {
 });
 
 app.get('/bigquery-data', async (req, res) => {
-  const query = 'SELECT * FROM `testongDataset.avocado` LIMIT 10';
+  // const query = 'SELECT * FROM `testongDataset.avocado` LIMIT 10';
+  const query = 'SELECT * FROM `datos_diarios2.datos_diarios_red_horarios_deduplicated` LIMIT 10';
   const options = {
     query: query,
     location: 'US', 
