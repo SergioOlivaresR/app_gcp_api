@@ -15,7 +15,7 @@ app.get('/health', async (req, res) => {
 
 app.get('/bigquery-data', async (req, res) => {
   // const query = 'SELECT * FROM `testongDataset.avocado` LIMIT 10';
-  const query = 'SELECT * FROM `datos_diarios2.datos_diarios_red_horarios_deduplicated` LIMIT 10';
+  const query = 'SELECT * FROM `datos_diarios2.datos_diarios_red_horarios_deduplicated`';
   const options = {
     query: query,
     location: 'US', 
