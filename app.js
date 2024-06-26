@@ -6,7 +6,7 @@ const port = 3100;
 // Create a BigQuery client
 const bigquery = new BigQuery({
   projectId: 'indigo-anchor-339414',
-  keyFilename: './creds/indigo-anchor-339414-3d1e5e19e9af.json',
+  keyFilename: '/etc/secrets/indigo-anchor-339414-3d1e5e19e9af.json',
 });
 
 app.get('/health', async (req, res) => {
