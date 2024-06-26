@@ -9,6 +9,10 @@ const bigquery = new BigQuery({
   keyFilename: './creds/indigo-anchor-339414-3d1e5e19e9af.json',
 });
 
+app.get('/health', async (req, res) => {
+  res.send('Holi!')
+});
+
 app.get('/bigquery-data', async (req, res) => {
   const query = 'SELECT * FROM `testongDataset.avocado` LIMIT 10';
   const options = {
